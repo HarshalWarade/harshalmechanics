@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanics_help</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="comp">
+                <a href="cmo.html" class="button">Quick Component Calculator</a>
+                <!-- <br> -->
+                <a href="index.html" class="button">Refresh</a>
+            </div>
+            <h1>Solve</h1>
+            <div class="info">
+                <div>
+                    <label for="angle">Enter the angle of the inclined: </label>
+                    <input type="number" class="genInp" id="angle">
+                </div>
+                <div>
+                    <label for="weight">Enter weight of the block: </label>
+                    <input type="number" class="genInp" id="weight">
+                </div>
+                <div>
+                    <label for="cof">Enter the coefficient of friction: </label>
+                    <input type="number" class="genInp" id="cof">
+                </div>
+                <div>
+                    <label for="tension">Enter tension (if any): </label>
+                    <input type="number" class="genInp" id="tension">
+                </div>
+                <div>
+                    <label for="other">Other forces acting (if any with signs): </label>
+                    <input type="number" class="genInp" id="other">
+                </div>
+                <div>
+                    <label for="direction"> Select the direction of motion: 
+                        <input type="radio" name="direction" id="up"> Upwards
+                        <input type="radio" name="direction" id="down"> Downwards
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="process">
+            <button id="process">
+                Process
+            </button>
+        </div>
+        <div class="details" id="thisToo">
+            <h1 style="text-align: center;">Given Details</h1>
+            <div class="mainDetails">
+                <div><h3>Weight (W): </h3><span id="disWeight"></span></div>
+                <div><h3>Angle of Inclination (ɑ): </h3><span id="disAngle"></span></div>
+                <div><h3>Coefficient of friction (ɥ): </h3><span id="disFriction"></span></div>
+                <div><h3>Tension in the string (T): </h3><span id="disTension"></span></div>
+                <div><h3>Other Force (F): </h3><span id="disOther"></span></div>
+                <div><h3>Motion of the block: </h3><span id="disMotion"></span></div>
+            </div>
+        </div>
+        <div class="details" id="hide">
+            <div class="mainDetails">
+            <div><h2>Σfx: </h2> <span id="resultUp"></span></div>
+            <div><h2>Σfy: </h2> <span id="resultDown"></span></div>
+            <div><h2>Resultant: </h2> <span id="resultant"></span></div>
+            </div>
+        </div>
+        <div class="figure" id="createDiagram">
+            <!-- <h2>Diagram</h2> -->
+            <!-- dhfj -->
+            <div class="actions">
+                <div id="varying">
+                    <div id="block">
+                        <h4 id="fetchWeight"></h4>
+                    </div>
+                    
+                    <div id="force">
+                        <!-- <ion-icon name="arrow-back-outline"></ion-icon> -->
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                        <p id="fetchExtra"></p>
+                    </div>
+                </div>
+                <div id="baseFixed">
+                <div>Angle of inclination is: <h4 id="fetchAngle"></h4></div>
+                </div>
+            </div>
+            <!-- <button>GET DETAILS</button> -->
+            <div class="allDetails">
+                <a href="#" class="button" id="fetchEverything">
+                    Get details
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="asl">
+        <div id="all">
+
+        </div>
+        <a href="#" id="close">Close</a>
+    </div>
+    <script src="logic.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

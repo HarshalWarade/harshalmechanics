@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let weight = 600;
+        let coefficient = 0.4;
+        let otherForce = 100;
+        let tension = 200;
+        let inclined = 30;
+        let degree = 30*(Math.PI/180);
+        console.log(degree);
+        let fx = (otherForce + tension) - (weight*Math.sin(degree) + coefficient*weight*Math.cos(degree));
+        console.log(fx);
+    </script>
+</body>
+</html>

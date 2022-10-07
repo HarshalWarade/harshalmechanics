@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+div{
+    height: 400px;
+    width: 500px;
+}
+div #wa{
+    position: relative;
+    top: 340px;
+    left: 199px;
+}
+div #wb{
+    position: relative;
+    color: red;
+    top: 255px;
+    left: 290px;
+}
+div img{
+    height: 100%;
+    width: 100%;
+}
+
+#btn{
+    padding: 10px 30px;
+    position: relative;
+    left: 50px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: red;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+#numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+#numbers input{
+    width: 400px;
+    padding: 10px 20px;
+    font-size: 20px;
+}

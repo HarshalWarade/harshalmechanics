@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            line-height: 60px;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        #process {
+            padding: 10px 30px;
+            cursor: pointer;
+            background: #f24;
+            border: none;
+            outline: none;
+            color: white;
+            letter-spacing: 2px;
+            font-weight: 700;
+            border-radius: 10px;
+        }
+
+        #vary {
+            height: 2px;
+            background: blue;
+            transform-origin: left;
+            width: 40%;
+        }
+
+        #base {
+            height: 2px;
+            width: 40%;
+            background: #f24;
+        }
+
+        #mes {
+            padding: 2px 30px;
+        }
+
+        #draw {
+            margin-top: 220px;
+        }
+
+        .somethi {
+            width: 50%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Components Calculator</h2>
+    <div class="wrapper">
+        <div class="manage">
+            <div>
+                <label for="magn">Enter the magnitude of force: </label>
+                <input type="number" id="magn">
+            </div>
+            <div>
+                <label for="angle">Enter the angle measurement: </label>
+                <input type="number" id="angle">
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <button id="process">
+            Process
+        </button>
+    </div>
+    <div id="result">
+        <div>
+            <h3>x-component: </h3><span id="xcomp"></span>
+        </div>
+        <div>
+            <h3>y-component: </h3><span id="ycomp"></span>
+        </div>
+    </div>
+    <h2 id="diag">Diagram</h2>
+    <div id="draw">
+        <div class="somethi">
+
+            <div id="vary">
+
+                <div id="mes">20°</div>
+            </div>
+            <div id="base">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        let magn = document.getElementById('magn');
+        let angle = document.getElementById('angle');
+        let result = document.getElementById('result');
+        let xcomp = document.getElementById('xcomp');
+        let ycomp = document.getElementById('ycomp');
+        let draw = document.getElementById('draw');
+        let vary = document.getElementById('vary');
+        let diag = document.getElementById('diag');
+        let mes = document.getElementById('mes');
+        result.style.visibility = 'hidden';
+        diag.style.visibility = 'hidden';
+        draw.style.visibility = 'hidden';
+        mes.style.visibility = 'hidden';
+        let process = document.getElementById('process').addEventListener('click', () => {
+            result.style.visibility = 'visible';
+            diag.style.visibility = 'visible';
+            draw.style.visibility = 'visible';
+            mes.style.visibility = 'visible';
+            let thita = angle.value * Math.PI / 180;
+            mes.innerHTML = angle.value + "°";
+            vary.style.transform = `rotateZ(-${angle.value}deg)`;
+            xcomp.innerHTML = (magn.value * Math.cos(thita)) + " N";
+            ycomp.innerHTML = (magn.value * Math.sin(thita)) + " N";
+        })
+    </script>
+</body>
+
+</html>
